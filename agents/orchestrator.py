@@ -13,7 +13,6 @@ class Orchestrator:
     def run(self, brd_text: str):
         brd_model = self.brd_parser.parse_brd(brd_text)
         json_data = self.json_generator.generate_json(brd_model)
-
         if json_data is None:
             print("JSON generation failed.")
             return
